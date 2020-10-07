@@ -8,3 +8,6 @@ using puppeteer will scrap info ffrom public auction and compare prices with cra
 * Puppetter.js 
 * Express.js as back end
 * react as front end
+
+
+ForTesting Purpuse WORDPRESS?
