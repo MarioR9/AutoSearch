@@ -16,7 +16,9 @@ let data = [];
 	const button = await page.evaluateHandle(
 		() => document.getElementById('columnsFrame').children[4].children[2].children[0].children[0]
 	);
+	await button.click();
 
+	await page.waitFor(5000);
 	await page.evaluate(() => {
 		debugger;
 	});
