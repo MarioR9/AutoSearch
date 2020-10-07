@@ -49,8 +49,7 @@ let data = [];
 		];
 	}, data);
 
-	const button2 = await page.evaluateHandle(() => document.getElementById('callout').children[0]);
-	await button2.click();
+	await page.goBack();
 
 	await page.waitFor(5000);
 	await page.evaluate(() => {
@@ -61,5 +60,3 @@ let data = [];
 
 	await browser.close();
 })();
-
-//! document.getElementById('columnsFrame').children[4].children[2].children.length --> table containig all cars
