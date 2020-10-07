@@ -4,8 +4,11 @@ import './App.css';
 function App() {
 	return 
 	<div className="App">
-		<h1> Auto Search </h1>
-	</div>;
+		<div>
+			<h1> Auto Search </h1>
+			<input/>
+		</div>
+	</div>
 }
 
 export default App;
