@@ -13,10 +13,11 @@ let data = [];
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
 
-	for (let x = 0; x < 2; x++) {
-		await page.evaluate(() => {
+	for (let x = 0; x < carCollection; x++) {
+		debugger;
+		await page.evaluate((x) => {
 			document.getElementById('columnsFrame').children[4].children[2].children[x].children[0].click();
-		});
+		}, x);
 
 		await page.waitFor(1500);
 		let result = await page.evaluate((data) => {
