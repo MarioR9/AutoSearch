@@ -13,50 +13,52 @@ let data = [];
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
 
-	const button = await page.evaluateHandle(
-		() => document.getElementById('columnsFrame').children[4].children[2].children[0].children[0]
-	);
-	await button.click();
+	for (let x = 0; x < 2; x++) {
+		await page.evaluate(() => {
+			document.getElementById('columnsFrame').children[4].children[2].children[x].children[0].click();
+		});
 
-	await page.waitFor(5000);
-
-	await page.evaluate((data) => {
-		let gallery = [];
-		let gallerySize = document.getElementById('smlImageSet').children[3].children.length;
-		for (let i = 0; i < gallerySize; i++) {
-			gallery.push(document.getElementById('smlImageSet').children[3].children[i].children[0].children[0].src);
-		}
-		data = [
-			{
-				year: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
-					.children[1].innerText,
-				vin: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
-					.children[3].innerText,
-				make: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[1]
-					.children[1].innerText,
-				bodyStyle: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[1]
-					.children[3].innerText,
-				model: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[2]
-					.children[1].innerText,
-				odometer: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[4]
-					.children[1].innerText,
-				trans: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[6]
-					.children[1].innerText,
-				exColor: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[8]
-					.children[1].innerText,
-				gallery: gallery
+		await page.waitFor(1500);
+		let result = await page.evaluate((data) => {
+			let gallery = [];
+			let gallerySize = document.getElementById('smlImageSet').children[3].children.length;
+			for (let i = 0; i < gallerySize; i++) {
+				gallery.push(
+					document.getElementById('smlImageSet').children[3].children[i].children[0].children[0].src
+				);
 			}
-		];
-	}, data);
+			data.push([
+				{
+					year: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
+						.children[1].innerText,
+					vin: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
+						.children[3].innerText,
+					make: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[1]
+						.children[1].innerText,
+					bodyStyle: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[1].children[3].innerText,
+					model: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[2]
+						.children[1].innerText,
+					odometer: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[4].children[1].innerText,
+					trans: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[6]
+						.children[1].innerText,
+					exColor: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[8].children[1].innerText,
+					gallery: gallery
+				}
+			]);
 
-	await page.goBack();
+			return data;
+		}, data);
 
-	await page.waitFor(5000);
-	await page.evaluate(() => {
-		debugger;
-	});
+		await page.goBack();
 
-	await page.screenshot({ path: 'example.png' });
-
+		await page.waitFor(1500);
+		await page.evaluate((result) => {
+			console.log(result);
+			debugger;
+		}, result);
+	}
 	await browser.close();
 })();
