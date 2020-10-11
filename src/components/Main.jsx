@@ -30,6 +30,9 @@ let data = []; //collects car divs
 			}
 			data.push([
 				{
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					collects detaisl of each car
+					////////////////////////////////////////////////////////////////////////////////////////////////////
 					year: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
 						.children[1].innerText,
 					vin: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
