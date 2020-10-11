@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 let carCollection = '';
-let data = [];
+let data = []; //collects car divs
 
 (async () => {
 	const browser = await puppeteer.launch({ headless: false, devtools: true });
