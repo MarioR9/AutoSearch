@@ -4,6 +4,8 @@ let carCollection = '';
 let data = []; //collects car divs
 
 /* ? auyo search and connec to craigsts for price check?*/
+//list changes every week...
+
 (async () => {
 	const browser = await puppeteer.launch({ headless: false, devtools: true });
 	const page = await browser.newPage();
