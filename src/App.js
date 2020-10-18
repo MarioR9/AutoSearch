@@ -11,7 +11,6 @@ function App() {
 			<h1>Secsion 1</h1>
 			<input/>
 		</div>
-	
 		<div>
 			<h1>Secsion 2</h1>
 			<input/>
