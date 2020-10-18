@@ -5,7 +5,7 @@ let data = []; //collects car divs
 
 /* ? auyo search and connec to craigsts for price check?*/
 //list changes every week...
-
+//auyo update list weekly
 (async () => {
 	const browser = await puppeteer.launch({ headless: false, devtools: true });
 	const page = await browser.newPage();
