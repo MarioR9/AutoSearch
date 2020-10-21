@@ -18,7 +18,7 @@ let data = []; //collects car divs
 	for (let x = 0; x < carCollection; x++) {
 		debugger;
 		await page.evaluate((x) => {
-			document.getElementById('columnsFrame').children[4].children[2].children[x].children[0].click();
+			document.getElementById('columnsFrame').children[4].children[2].children[x].children[0].click();  // asyc issue x undefined
 		}, x);
 		await page.waitFor(1500);
 		let result = await page.evaluate((data) => {
