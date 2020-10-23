@@ -18,7 +18,7 @@ let data = []; //collects car divs
 	await page.evaluate((carCollection) => {
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
-	
+	await page.waitFor(2500);
 	for (let x = 0; x < carCollection; x++) {
 		debugger;
 		await page.evaluate((x) => {
