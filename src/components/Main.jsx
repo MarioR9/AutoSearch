@@ -62,8 +62,6 @@ let data = []; //collects car divs
 			return data;
 		}, data);
 
-		await page.goBack();
-
 		await page.waitFor(1500);
 		await page.evaluate((result) => {
 			console.log(result);
