@@ -14,6 +14,12 @@ let data = []; //collects car divs
 	await page.evaluate((carCollection) => {
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
+	
+	await page.evaluate((carCollection) => {
+		console.log(carCollection)
+		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
+	}, carCollection);
+	
 	//second options
 	await page.evaluate((carCollection) => {
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
