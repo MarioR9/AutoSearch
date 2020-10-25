@@ -12,10 +12,6 @@ let data = []; //collects car divs
 		'https://www.manheim.com/publicauctions/vehicleList.do?auctionID=BWAE&saleDate=20201013&saleYear=2020&saleNumber=42&sortKey=1&sortDirection=asc&consignor=PCAP&consignor=REPO&consignor=PWFB'
 	);
 	await page.evaluate((carCollection) => {
-		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
-	}, carCollection);
-	
-	await page.evaluate((carCollection) => {
 		console.log(carCollection)
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
