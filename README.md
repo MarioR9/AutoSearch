@@ -15,3 +15,12 @@
 Manheim auto search web app that collects aution car listings. Collects cars information and advise the user of current 3rd party market price. Possible API Cragislist.
 	
 
+## Technologies
+
+Project is created with:
+* React 
+* Puppeteer.js
+* Express.js
+* BootstrapUI
+* HTML
+* CSS
