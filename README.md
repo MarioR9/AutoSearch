@@ -4,17 +4,14 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/MarioR9/AutoSearch?color=g&label=Repo%20Size)&nbsp; 
 ![GitHub last commit](https://img.shields.io/github/last-commit/MarioR9/AutoSearch)
 
-# AutoSearch
+## AutoSearch
 AutoAuction search
 Mnaheim and craigslist
 Automated scraper for auto auction
-using puppeteer will scrap info ffrom public auction and compare prices with craigslist
 
-* Puppetter.js 
-* Express.js as back end
-* react as front end
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [images](#images)
 
 
-ForTesting Purpuse WORDPRESS?
-
-FrontEnd WordPRess elemtri frontend
