@@ -5,13 +5,13 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/MarioR9/AutoSearch)
 
 ## AutoSearch
-AutoAuction search
-Mnaheim and craigslist
-Automated scraper for auto auction
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [images](#images)
 
+## General info
+
+Manheim auto search web app that collects aution car listings. Collects cars information and advise the user of current 3rd party market price. Possible API Cragislist.
+	
 
