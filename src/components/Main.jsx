@@ -59,7 +59,36 @@ let data = []; //collects car divs
 
 			return data;
 		}, data);
+		
+		data.push([
+				{
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					collects detaisl of each car auto update
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					
+					year: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
+						.children[1].innerText,
+					vin: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[0]
+						.children[3].innerText,
+					make: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[1]
+						.children[1].innerText,
+					bodyStyle: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[1].children[3].innerText,
+					model: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[2]
+						.children[1].innerText,
+					odometer: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[4].children[1].innerText,
+					trans: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1].children[6]
+						.children[1].innerText,
+					exColor: document.getElementsByClassName('vehTab_detail_specs')[0].children[0].children[1]
+						.children[8].children[1].innerText,
+					gallery: gallery
+				}
+			]);
 
+			return data;
+		}, data);
+		
 		await page.waitFor(1500);
 		await page.evaluate((result) => {
 			console.log(result);
