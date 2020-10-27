@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 let carCollection = '';
 let data = []; //collects car divs
-
+let dataTest = []; //test
 /* ? auyo search and connec to craigsts for price check?*/
 
 (async () => {
