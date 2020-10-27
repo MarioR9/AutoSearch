@@ -17,6 +17,12 @@ let dataTest = []; //test
 		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
 	}, carCollection);
 	
+		//test
+		await page.evaluate((carCollection) => {
+		console.log(carCollection)
+		carCollection = document.getElementById('columnsFrame').children[4].children[2].children.length;
+	}, carCollection);
+	
 	await page.waitFor(2500);
 	for (let x = 0; x < carCollection; x++) {
 		debugger;
